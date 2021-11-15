@@ -30,9 +30,9 @@ class PostsView extends StatelessWidget {
         builder: (_) {
           return ListView.builder(
             padding: const EdgeInsets.only(top: 10, bottom: 10),
-            itemCount: _postsViewModel.albumsList.length,
+            itemCount: _postsViewModel.postsList.length,
             itemBuilder: (context, index) {
-              return PostsCard(model: _postsViewModel.albumsList[index]);
+              return PostsCard(model: _postsViewModel.postsList[index]);
             },
           );
         },

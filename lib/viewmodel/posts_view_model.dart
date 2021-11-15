@@ -11,7 +11,7 @@ abstract class _PostsViewModelBase with Store {
   bool isLoading = true;
 
   @observable
-  List<PostsModel> albumsList = [];
+  List<PostsModel> postsList = [];
   IPostService service;
 
   _PostsViewModelBase({required this.service}) {
@@ -20,6 +20,6 @@ abstract class _PostsViewModelBase with Store {
 
   @action
   Future<void> fetchDatas() async {
-    albumsList = await service.fetchDatas();
+    postsList = await service.fetchDatas();
   }
 }

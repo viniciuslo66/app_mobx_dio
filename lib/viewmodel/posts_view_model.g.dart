@@ -24,18 +24,18 @@ mixin _$PostsViewModel on _PostsViewModelBase, Store {
     });
   }
 
-  final _$albumsListAtom = Atom(name: '_PostsViewModelBase.albumsList');
+  final _$postsListAtom = Atom(name: '_PostsViewModelBase.postsList');
 
   @override
-  List<PostsModel> get albumsList {
-    _$albumsListAtom.reportRead();
-    return super.albumsList;
+  List<PostsModel> get postsList {
+    _$postsListAtom.reportRead();
+    return super.postsList;
   }
 
   @override
-  set albumsList(List<PostsModel> value) {
-    _$albumsListAtom.reportWrite(value, super.albumsList, () {
-      super.albumsList = value;
+  set postsList(List<PostsModel> value) {
+    _$postsListAtom.reportWrite(value, super.postsList, () {
+      super.postsList = value;
     });
   }
 
@@ -50,7 +50,7 @@ mixin _$PostsViewModel on _PostsViewModelBase, Store {
   String toString() {
     return '''
 isLoading: ${isLoading},
-albumsList: ${albumsList}
+postsList: ${postsList}
     ''';
   }
 }
