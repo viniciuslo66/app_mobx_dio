@@ -17,6 +17,7 @@ class PostDetalhes extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Container(
+            width: double.infinity,
             padding: EdgeInsets.only(top: 15, left: 10),
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -32,22 +33,6 @@ class PostDetalhes extends StatelessWidget {
                   ),
                   radius: 50.0,
                 ),
-                Padding(padding: EdgeInsets.all(10)),
-                Text(
-                  "Title:",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontStyle: FontStyle.normal,
-                      fontSize: 28.0),
-                ),
-                Padding(padding: EdgeInsets.all(5)),
-                Text(
-                  model.title ?? "",
-                  style: TextStyle(
-                    fontSize: 22.0,
-                    color: Colors.black,
-                  ),
-                ),
               ],
             ),
           ),
@@ -57,6 +42,27 @@ class PostDetalhes extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                Text(
+                  "Title:",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 28.0),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                ),
+                Text(
+                  model.title ?? '',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                ),
                 Text(
                   "Body:",
                   style: TextStyle(
