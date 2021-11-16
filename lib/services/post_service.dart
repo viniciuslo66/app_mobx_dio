@@ -11,14 +11,18 @@ class PostsService extends IPostService {
 
   @override
   Future<List<PostsModel>> fetchDatas() async {
+    //variável receberá os dados da API
     final response = await service.get(ServicePath.POSTS.rawValeu);
 
+    //Se estiver tudo bem o statusCode do HTTP então ele constinuará para a criação do MAP
     if (response.statusCode == HttpStatus.ok) {
       final responseData = response.data;
       if (responseData is List) {
         return responseData.map((e) => PostsModel.fromJson(e)).toList();
       }
     }
+
+    //retornando a lista com os dados
     return [];
   }
 }

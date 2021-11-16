@@ -8,9 +8,6 @@ class PostsViewModel = _PostsViewModelBase with _$PostsViewModel;
 
 abstract class _PostsViewModelBase with Store {
   @observable
-  bool isLoading = true;
-
-  @observable
   List<PostsModel> postsList = [];
   IPostService service;
 

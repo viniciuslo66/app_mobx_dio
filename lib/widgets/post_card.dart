@@ -23,9 +23,7 @@ class PostsCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PostDetalhes(
-                model: model,
-              ),
+              builder: (context) => PostDetalhes(model: model),
             ),
           ),
         },
