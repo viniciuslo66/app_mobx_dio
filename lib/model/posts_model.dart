@@ -17,6 +17,7 @@ class PostsModel {
   factory PostsModel.fromJson(Map<String, dynamic> json) {
     return _$PostsModelFromJson(json);
   }
+
   Map<String, dynamic> toJson() {
     return _$PostsModelToJson(this);
   }
