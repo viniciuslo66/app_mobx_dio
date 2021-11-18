@@ -32,20 +32,3 @@ class PostsCard extends StatelessWidget {
     );
   }
 }
-
-
-/*
-showDialog<String>(
-  context: context,
-  builder: (BuildContext context) => AlertDialog(
-    title: Text(model.title ?? ''),
-    content: Text(model.body ?? ''),
-    actions: <Widget>[
-      TextButton(
-        onPressed: () => Navigator.pop(context, 'Fechar'),
-        child: const Text('Fechar'),
-      ),
-    ],
-  ),
-)
-*/
